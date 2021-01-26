@@ -2,7 +2,6 @@ const errorHandler = require('./routes/errors')
 
 const express = require('express')
 const app = express()
-const port = 3000
 
 // SOCKET.IO
 const http = require('http').Server(app);
@@ -20,13 +19,10 @@ const cors = require('cors')
 
 app.use(helmet());
 app.use(cors());
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.status(200);
-    res.json({
-        'status' : res.statusCode,
-        'message' : 'Bienvenue 🎮',
-    })
+    res.sendFile(path.join(__dirname + '/index.html'));
 })
 
 consumer.start(io);
@@ -34,5 +30,5 @@ consumer.start(io);
 app.use(errorHandler.error404);
 
 http.listen(process.env.PORT || 5000, () => {
-  console.log(`Listening at http://localhost:${port}`)
+  console.log(`Listening at http://localhost:${process.env.PORT || 5000}`)
 })

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/slime.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script type="module" src="index.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <section id="modal">
+        <form id="form-username">
+            <label for="username-input">Choose your username</label>
+            <input id="username-input" type="text" />
+            <input type="submit" value="Validate" />
+        </form>
+    </section>
+
+    <section id="toast-error">
+        <p id="toast-error-message"></p>
+    </section>
+
+    <main id="app">
+        <div id="logo">
+            <img src="assets/slime.png" />
+            <span>MySlime</span>
+        </div>
+        <div id="header">
+            <div id="nb-user-wrapper">
+                <span id="nb-user"></span>
+                <span class="material-icons" style="color:white">
+                    person
+                </span>
+            </div>
+        </div>
+        <section id="chat-messages">
+            <!-- Chat Messages -->
+        </section>
+        <form id="form-message">
+            <input id="message-input" type="text" placeholder="Write a message..." />
+            <button type="submit">
+                <span class="material-icons">send</span>
+            </button>
+        </form>
+    </main>
+</body>
+</html>
