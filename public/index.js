@@ -13,6 +13,10 @@ const errorMessageWrapper = document.getElementById('toast-error')
 // MOBILE HEIGHT (URL BAR)
 app.style.height = `${window.innerHeight}px`;
 
+window.onresize(()=>{
+    app.style.height = `${window.innerHeight}px`;
+});
+
 let username = '';
 const socketHandler = new SocketHandler()
 
