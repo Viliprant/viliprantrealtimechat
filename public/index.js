@@ -1,6 +1,7 @@
 import Message from './classes/Message.js'
 import SocketHandler from './classes/SocketHandler.js'
 
+const app = document.getElementById('app')
 const formMessage = document.getElementById('form-message')
 const formUsername = document.getElementById('form-username')
 const modal = document.getElementById('modal')
@@ -8,6 +9,9 @@ const messageInput = document.getElementById('message-input')
 const usernameInput = document.getElementById('username-input')
 const errorMessageElement = document.getElementById('toast-error-message')
 const errorMessageWrapper = document.getElementById('toast-error')
+
+// MOBILE HEIGHT (URL BAR)
+app.style.height = `${window.innerHeight}px`;
 
 let username = '';
 const socketHandler = new SocketHandler()
