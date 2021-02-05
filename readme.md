@@ -1,5 +1,7 @@
 # MySlime - Real-time chat
 
+[Link to website](https://viliprantrealtimechat.herokuapp.com/)
+
 ## Installation
 Install dependencies :
 ````
